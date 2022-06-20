@@ -1,4 +1,4 @@
-# expo_yelp_clone_test
+# Expo Yelp Clone Test
 
 ## Summary
 This is a small test project that acts as an app that allows you to find restaurants in toronto, ON using the yelp API
