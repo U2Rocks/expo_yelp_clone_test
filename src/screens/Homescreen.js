@@ -1,14 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View} from 'react-native';
-import React, { useState } from "react";
-import Header from './src/components/Header';
-import Search from './src/components/Search';
-import Categories from './src/components/Categories';
-import Restaurants from './src/components/Restaurants';
-// import CategoryItem from '.oneWithIt/src/components/CategoryItem';
+import { StatusBar } from "expo-status-bar";
+import { View, StyleSheet } from "react-native";
+import Categories from "../components/Categories";
+import Header from "../components/Header";
+import Restaurants from "../components/Restaurants";
+import Search from "../components/Search";
 
-export default function App() {
-  const [term, setTerm] = useState("Burger")
+
+export default function HomeScreen() {
+
+    const [term, setTerm] = useState("Burger")
 
   const commonCategories = [
     {
@@ -37,7 +37,7 @@ export default function App() {
     },
   ]
 
-  return (
+    return (
     <View style={styles.container}>
       <Header />
       <Search setTerm={setTerm}/>
@@ -45,11 +45,12 @@ export default function App() {
       <Restaurants term={term}/>
       <StatusBar />
     </View>
-  );
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-  },
-});
+    container: {
+        backgroundColor: "rgb(253,253,253)",
+        flex: 1,
+    }
+})
